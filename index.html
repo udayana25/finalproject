@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="finalcss.css">
+  </head>
+  <body>
+
+    <div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <img id="myImage" src="1.jpeg" alt="img" height="900px" width="520px">
+        <div class="content">
+          <p id="context">On this most important day of your life.. I wanna make you feel as special as possible... So I am here with all fantastic and impressive good wishes I can give and wish for you..</p>
+        </div>
+        <button id="button32" type="button" onclick="myFunction2_2()">There's more to it</button>
+        <button id="button42" type="button" onclick="myFunction3_2()">A bit more</button>
+
+        <div class="navigation">
+          <button onclick="myFunction2()">2</button>
+          <button onclick="myFunction3()">3</button>
+          <button onclick="myFunction4()">4</button>
+          <button onclick="myFunction1()">1</button>
+        </div>
+        <button id="close">&lt;</button>
+      </div>
+    </div>
+
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Happy Birthday!</h1>
+      </div>
+      <button id="open">&gt;</button>
+    </div>
+  </div>
+  <audio controls>
+    <source src="new.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    (function() {
+      function $(id) {
+        return document.getElementById(id);
+      }
+
+      var card = $('card'),
+          openB = $('open'),
+          closeB = $('close'),
+          timer = null;
+      console.log('wat', card);
+      openB.addEventListener('click', function () {
+        card.setAttribute('class', 'open-half');
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(function () {
+          card.setAttribute('class', 'open-fully');
+          timer = null;
+        }, 1000);
+      });
+
+      closeB.addEventListener('click', function () {
+        card.setAttribute('class', 'close-half');
+        if (timer) clearTimerout(timer);
+        timer = setTimeout(function () {
+          card.setAttribute('class', '');
+          timer = null;
+        }, 1000);
+      });
+
+    }());
+
+    function myFunction2() {
+    document.getElementById("myImage").src="2.jpeg";
+    document.getElementById("context").innerHTML="Anything and everything suits on you.. But when you wear a SMILE,you ROCK!!!";
+    document.getElementById("myImage").style.height="1000px";
+    document.getElementById("button32").style.display="block";
+    document.getElementById("button42").style.display="none";
+    }
+
+    function myFunction3() {
+    document.getElementById("myImage").src="3.jpeg";
+    document.getElementById("context").innerHTML="On this special day, all I can think of, is the times we have spent together... the laughs , the success,the lows , the fights and all of it.Seems to me an unavoidable proof that you have always been there for me.You are one of the few things that makes me smile.";
+    document.getElementById("myImage").style.height="950px";
+    document.getElementById("button32").style.display="none";
+    document.getElementById("button42").style.display="block";
+    }
+
+    function myFunction4() {
+    document.getElementById("myImage").src="4.jpeg";
+    document.getElementById("context").innerHTML="I feel lucky to have found you.Your essence in my life is the best gift you gave me .Times were rough and times were great,And whenever I needed you through thick and thin, you were always there.You are the wonderful person that I have met.Thank you for being a friend that is so sweet and true to me .Thank you for all your kindness and care you have given which means so much to me.Happy Birthday Sammy 🎂🎉";
+    document.getElementById("myImage").style.height="900px";
+    document.getElementById("button32").style.display="none";
+    document.getElementById("button42").style.display="none";
+    }
+    function myFunction2_2() {
+    document.getElementById("myImage").style.display="block";
+    document.getElementById("myImage").src="22.jpeg";
+    document.getElementById("context").innerHTML="Because i see your smile begins with your Lips,Reflects in your eyes & ends with a glow on your face ..😊.I Wish you many many Smiling Moments in your life, love in your heart and peace to your soul..KEEP SMILING...";
+    document.getElementById("myImage").style.height="900px";
+    document.getElementById("button32").style.display="none";
+    }
+
+    function myFunction3_2() {
+    document.getElementById("myImage").src="32.jpeg";
+    document.getElementById("context").innerHTML="No matter how much the distance and time is a disadvantage, i want you to know that you are really a valuable person to my life who gives me remarkable joy 🤗..I truly wish you have the best year of your life ahead..KEEP SPREADING JOY AND HAPPINESS..";
+    document.getElementById("myImage").style.height="1000px";
+    document.getElementById("button42").style.display="none"
+    }
+
+    function myFunction1() {
+    document.getElementById("myImage").src="1.jpeg";
+    document.getElementById("context").innerHTML="On this most important day of your life.. I wanna make you feel as special as possible... So I am here with all fantastic and impressive good wishes I can give and wish for you..";
+    document.getElementById("myImage").style.height="900px";
+    document.getElementById("button32").style.display="none";
+    document.getElementById("button42").style.display="none";
+    }
+
+
+  </script>
+  </body>
+
+</html>
